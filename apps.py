@@ -1,5 +1,8 @@
 from django.apps import AppConfig
 
 
-class CoreConfig(AppConfig):
-    name = 'core'
+class UsersConfig(AppConfig):
+    name = 'users'
+
+    def ready(self):
+        from . import signals
